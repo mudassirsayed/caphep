@@ -3,7 +3,7 @@
 
 /* css variables */
 :root {
-  --body-bg-color: #05043e;
+  --body-bg-color: #fff;
   --card-primary-color: #151450;
   --card-secondary-color: #211c5c;
   --btn-bg-color: #7259db;
@@ -66,7 +66,7 @@ section {
 }
 
 .mobile__menu i {
-  color: #fff;
+  color: black;
   font-size: 1.3rem;
 }
 
@@ -104,14 +104,14 @@ section {
   display: none;
 }
 .nav__list .nav__item a {
-  color: #fff;
+  color: black;
   text-decoration: none;
   font-size: 0.9rem;
   cursor: pointer;
 }
 
 .search__box span i {
-  color: #fff;
+  color: black;
 }
 
 .active__nav {
@@ -138,14 +138,14 @@ section {
   }
 
 .hero__content h2 {
-  color: #fff;
+  color: black;
   font-size: var(--text-heading);
   line-height: 55px;
   margin-bottom: 30px;
 }
 
 .hero__content p {
-  color: #fff;
+  color: black;
   opacity: 75%;
   line-height: 30px;
   margin-bottom: 30px;
@@ -156,7 +156,7 @@ section {
   border: none;
   padding: 10px 30px;
   background: var(--btn-bg-color);
-  color: #fff;
+  color: black;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -207,13 +207,13 @@ section {
   }
   
   .search__engine-content h2 {
-    color: #fff;
+    color: black;
     font-size: var(--text-heading);
     margin-bottom: 20px;
   }
   
   .search__engine-content p {
-    color: #fff;
+    color: black;
     opacity: 75%;
     font-size: var(--text-small);
     line-height: 30px;
