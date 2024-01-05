@@ -6,8 +6,8 @@
   --body-bg-color: #fff;
   --card-primary-color: #151450;
   --card-secondary-color: #211c5c;
-  --btn-bg-color: #7259db;
-  --secondary-color: #7259db;
+  --btn-bg-color: #00308F;
+  --secondary-color: rgb(155, 145, 145);
   --icon-bg-01: #f7a025;
   --icon-bg-02: #2d70ab;
   --icon-bg-03: #fe1161;
@@ -52,6 +52,7 @@ section {
   width: 100%;
   height: 120px;
   line-height: 80px;
+  background-color: #00308F;
 }
 .container {
   width: 1140px;
@@ -66,7 +67,7 @@ section {
 }
 
 .mobile__menu i {
-  color: black;
+  color: #fff;
   font-size: 1.3rem;
 }
 
@@ -104,14 +105,14 @@ section {
   display: none;
 }
 .nav__list .nav__item a {
-  color: black;
+  color: #fff;
   text-decoration: none;
   font-size: 0.9rem;
   cursor: pointer;
 }
 
 .search__box span i {
-  color: black;
+  color: #fff;
 }
 
 .active__nav {
@@ -156,7 +157,7 @@ section {
   border: none;
   padding: 10px 30px;
   background: var(--btn-bg-color);
-  color: black;
+  color: #fff;
   border-radius: 5px;
   cursor: pointer;
 }
