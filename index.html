@@ -15,6 +15,7 @@
     <!-- custom css file -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="swiper-bundle.min.css" />
   </head>
   <body>
     <!-- ========== header start ========== -->
@@ -29,12 +30,12 @@
             <div class="menu">
               <ul class="nav__list">
                 <li class="nav__item">
-                  <a href="#" class="active__nav">Home</a>
+                  <a onclick="scrollToSection('home')" class="active__nav">Home</a>
                 </li>
-                <li class="nav__item"><a href="#">Services</a></li>
-                <li class="nav__item"><a href="#">Portfolio</a></li>
-                <li class="nav__item"><a href="#">Blog</a></li>
-                <li class="nav__item"><a href="#">Contact</a></li>
+                <li class="nav__item"><a onclick="scrollToSection('programs')">Programs</a></li>
+                <li class="nav__item"><a onclick="scrollToSection('clients')">Clients</a></li>
+                <li class="nav__item"><a onclick="scrollToSection('about')">About</a></li>
+                <li class="nav__item"><a onclick="scrollToSection('contact_form')">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -46,7 +47,7 @@
     <!-- ========== header end ========== -->
 
     <!-- ========== main start ========== -->
-    <section class="hero__section">
+    <section class="hero__section" id="home">
       <div class="container">
         <div class="hero__wrapper">
           <div class="hero__content">
@@ -55,7 +56,7 @@
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse
               minus, pariatur voluptatum aliquam eos et.
             </p>
-            <button class="btn">Book Now</button>
+            <button class="btn" id="openModalBtn">Book Now</button>
           </div>
 
           <div class="hero__img">
@@ -65,7 +66,7 @@
       </div>
     </section>
     <!-- about us section start -->
-    <section>
+    <section id="about">
       <div class="container">
         <div class="search__engine-wrapper about__us">
           <div class="search__img about__img">
@@ -80,8 +81,7 @@
               temporibus minima dignissimos. Quaerat ipsum odio corporis dolore
               expedita esse est officia dolores.
             </p>
-
-            <button class="btn">Learn More</button>
+            <button class="btn" onclick="scrollToSection('contact_form')">Learn More</button>
           </div>
         </div>
       </div>
@@ -89,7 +89,7 @@
 
     <!-- about us section end -->
 
-    <section>
+    <section id="programs">
       <div class="container">
         <div class="our__team-wrapper">
           <div class="our__team-top">
@@ -283,9 +283,263 @@
     </section>
 
     <!-- counter section end -->
+
+    <!-- Faqs section starts -->
+    <section>
+      <div class="container">
+        <div class="section_top">
+          <h2>FAQ's</h2>
+        </div>
+        <div class="questions-container">
+          <div class="question">
+            <button>
+              <span>What's the best way to study JavaScript?</span>
+              <i class="ri-arrow-down-s-line"></i>
+            </button>
+            <p>
+              Start With An Online Course.An online tutorial is probably the
+              best way to learn JavaScript.If you're serious about learning
+              fast, efficiently and without missing any important information,
+              then you should consider enrolling in an online course.
+            </p>
+          </div>
+
+          <div class="question">
+            <button>
+              <span>What should I learn after JavaScript / js?</span>
+              <i class="ri-arrow-down-s-line"></i>
+            </button>
+            <p>
+              I suggest taking a look at Typescript and learning some popular
+              frontend framework (Angular, React, Vue). If you are interested in
+              backend, take a look at Node. js.
+            </p>
+          </div>
+
+          <div class="question">
+            <button>
+              <span>Can I get a job after learning JavaScript?</span>
+              <i class="ri-arrow-down-s-line"></i>
+            </button>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+              laboriosam ea odit voluptate culpa quas explicabo.
+            </p>
+          </div>
+
+          <div class="question">
+            <button>
+              <span>How long will it take to learn JavaScript?</span>
+              <i class="ri-arrow-down-s-line"></i>
+            </button>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+              corporis pariatur a maiores minus tempore magni nam beatae dolores
+              omnis.
+            </p>
+          </div>
+          <div class="question">
+            <button>
+              <span>Can I get a job after learning JavaScript?</span>
+              <i class="ri-arrow-down-s-line"></i>
+            </button>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+              laboriosam ea odit voluptate culpa quas explicabo.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Faqs section ends -->
+
+
+    <!-- testnnial section starts -->
+    <section id="clients">
+      <div class="container swiper">
+        <div class="section_top">
+          <h2>Our Top Ranked Partnered Institutes & Universities</h2>
+        </div>
+        <div class="slide-content">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./images/university01.jpg"/></div>
+          <div class="swiper-slide"><img src="./images/university03.jpg"/></div>
+          <div class="swiper-slide"><img src="./images/university04.jpg"/></div>
+          <div class="swiper-slide"><img src="./images/university05.jpg"/></div>
+          <div class="swiper-slide"><img src="./images/university-02.png"/></div>
+          <div class="swiper-slide"><img src="./images/university01.jpg"/></div>
+          <div class="swiper-slide"><img src="./images/university03.jpg"/></div>
+          <div class="swiper-slide"><img src="./images/university04.jpg"/></div>
+          <div class="swiper-slide"><img src="./images/university05.jpg"/></div>
+          <div class="swiper-slide"><img src="./images/university-02.png"/></div>
+        </div>
+      </div>
+        <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+        </div>
+    </section>
+      <!-- testnnial section ends -->
+
+       <!-- contact form section starts -->
+       <section id="contact_form">
+        <div class="container">
+          <div class="section_top">
+            <h2>Contact Us</h2>
+          </div>
+          <form
+          onsubmit="redirectAfterSubmission()"
+          action="https://formsubmit.co/edu.caphep@gmail.com"
+          method="POST"
+          >
+            <div class="input-group">
+              <label for="name">Name <span class="star-required">*</span></label>
+              <input type="text" name="name" required />
+            </div>
+            <div class="input-group">
+              <label for="contact">Contact Number <span class="star-required">*</span></label>
+              <input type="number" name="contact" required />
+            </div>
+            <div class="input-group">
+              <label for="email">Email <span class="star-required">*</span></label>
+              <input type="email" name="email" required />
+            </div>
+            <div class="input-group">
+              <label for="city">City <span class="star-required">*</span></label>
+              <input type="text" name="city" required />
+            </div>
+            <div class="input-group">
+              <label for="program">Select a program <span class="star-required">*</span></label>
+              <select  name="program">
+                <option value="mba">MBA</option>
+                <option value="exmba">Executive MBA</option>
+                <option value="pgdm">PGDM</option>
+                <option value="pgdba">PGDBA</option>
+              </select>
+            </div>
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/thankyou.html" />
+            <input type="submit" class="btn" />
+          </form>
+          </div>
+          </section>
+          
+       <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+       <section>
+        <div class="container contact_us">
+          <div class="section_top">
+            <h2>Contact Us</h2>
+          </div>
+          <form
+          onsubmit="redirectAfterSubmission()"
+          action="https://formsubmit.co/edu.caphep@gmail.com"
+          method="POST"
+          >
+            <div class="input-group">
+              <label for="name">Name <span class="star-required">*</span></label>
+              <input type="text" name="name" required />
+            </div>
+            <div class="input-group">
+              <label for="contact">Contact Number <span class="star-required">*</span></label>
+              <input type="number" name="contact" required />
+            </div>
+            <div class="input-group">
+              <label for="email">Email <span class="star-required">*</span></label>
+              <input type="email" name="email" required />
+            </div>
+            <div class="input-group">
+              <label for="city">City <span class="star-required">*</span></label>
+              <input type="text" name="city" required />
+            </div>
+            <div class="input-group">
+              <label for="program">Select a program <span class="star-required">*</span></label>
+              <select  name="program">
+                <option value="mba">MBA</option>
+                <option value="exmba">Executive MBA</option>
+                <option value="pgdm">PGDM</option>
+                <option value="pgdba">PGDBA</option>
+              </select>
+            </div>
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/thankyou.html" />
+            <input type="submit" class="btn" />
+          </form>
+          </div>
+          </section>
+          </div>
+          </div>
+
+         <!-- contact form section ends -->
+
+     <!-- ========== footer start ========== -->
+     <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__top">
+            <div class="footer__item-01">
+              <h2>Caphep</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <div class="footer__icon">
+                <span><i class="ri-facebook-line"></i></span>
+                <span><i class="ri-linkedin-line"></i></span>
+                <span><i class="ri-instagram-line"></i></span>
+                <span><i class="ri-twitter-line"></i></span>
+              </div>
+            </div>
+
+            <div class="footer__item-02">
+              <h4>Contact</h4>
+              <p>250, Vashi, India</p>
+              <p class="contact__number">
+                <span><i class="ri-phone-line"></i></span> +91 7506297253
+              </p>
+              <p class="contact__number">
+                <span><i class="ri-map-pin-2-line"></i></span> Vashi,
+                Navi Mumbai
+              </p>
+            </div>
+
+            <!-- <div class="footer__item-03">
+              <h4>Viewer Guide</h4>
+              <ul class="quick__list">
+                <li><a href="#">Feature</a></li>
+                <li><a href="#">Blog Post</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Help & Support</a></li>
+              </ul>
+            </div> -->
+
+            <div class="footer__item-03">
+              <h4>Community</h4>
+              <ul class="quick__list">
+                <li><a onclick="scrollToSection('about')">About us</a></li>
+                <li><a onclick="scrollToSection('clients')">Our clients</a></li>
+                <li><a onclick="scrollToSection('programs')">Our Programs</a></li>
+               
+              </ul>
+            </div>
+            </div>
+
+            <div class="footer__bottom">
+              <p>@Copyright 2024, Caphep all rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ========== footer end ========== -->
     <a href="https://wa.me/7506297253" class="whatsapp-icon" target="_blank">
       <img src="./images/whatsapp_icon.png" alt="WhatsApp" />
     </a>
+
+
+    <script src="swiper-bundle.min.js"></script>
     <!-- main js file -->
     <script src="main.js"></script>
   </body>

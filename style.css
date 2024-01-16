@@ -55,7 +55,7 @@ section {
   background-color: #00308F;
 }
 .container {
-  width: 1140px;
+  max-width: 1140px;
   margin: auto;
   padding: 0px 15px;
 }
@@ -397,6 +397,244 @@ section {
   }
   /* counter section end */
 
+/* FAQs section starts */
+
+.questions-container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.question{
+    border-bottom: 1px solid #000;
+}
+.question button{
+    width: 100%;
+    /* background-color: #000; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+    border:none;
+    outline: none;
+    font-size: 1.3rem;
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+}
+.question p{
+    font-size: 1rem;
+    max-height: 0;
+    opacity: 0;
+    line-height: 1.5;
+    overflow: hidden;
+    transition: all 0.6s ease;
+}
+
+/*add this class when click*/
+.question p.show{
+    max-height: 200px; 
+    opacity: 1;
+    padding:0px 15px 30px 15px;
+}
+.question button .d-arrow.rotate{
+    transform: rotate(180deg);
+}
+/* FAQs section ends */
+
+/* contact form section starts */
+form{
+    width: 90%;
+    margin: auto;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+label{
+    font-weight: 600;
+}
+.star-required{
+    color: red;
+}
+input{
+    padding: 0.5rem;
+}
+input[type="text"]{
+    font-size: 16px; 
+    padding: 8px;
+  }
+  input[type="number"]{
+    font-size: 16px; 
+    padding: 8px;
+  }
+  input[type="email"]{
+    font-size: 16px; 
+    padding: 8px;
+  }
+select{
+    padding: 0.5rem;
+    font-size: 16px;
+}
+
+
+/* contact form section ends */
+
+/* footer start */
+.footer {
+    background: #00308F;
+    margin-top: 50px;
+    padding: 60px 0px;
+  }
+  
+  .footer__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer__item-01 h2 {
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  
+  .footer__item-01,
+  .footer__item-02,
+  .footer__item-03,
+  .footer__item-04 {
+    width: 260px;
+  }
+  
+  .footer__item-02 h4,
+  .footer__item-03 h4,
+  .footer__item-04 h4 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 400;
+  }
+  
+  .footer__item-01 p {
+    color: #fff;
+    opacity: 75%;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    line-height: 30px;
+  }
+  
+  .footer__icon {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+  }
+  
+  .footer__icon span i {
+    color: #fff;
+  }
+  
+  .footer__item-02 p {
+    color: #fff;
+  }
+  
+  .contact__number {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  
+  .contact__number span i {
+    opacity: 75%;
+  }
+  
+  .quick__list {
+    list-style: none;
+  }
+  
+  .quick__list li {
+    line-height: 40px;
+  }
+  .quick__list li a {
+    text-decoration: none;
+    color: #fff;
+    opacity: 75%;
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+  
+  .footer__bottom {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .footer__bottom p {
+    font-size: 0.8rem;
+    color: #fff;
+    opacity: 75%;
+  }
+  /* footer end */
+
   hr{
     margin: 0.5rem;
   }
+
+  /* Modal Starts */
+/* Your existing styles go here */
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+  /* Modal Ends */
+
+
+  .swiper-button-next,
+.swiper-button-prev {
+    /* top: 60% !important; */
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1rem !important; 
+  font-weight: 600 !important;
+  color: black !important; 
+}
+
+.swiper-slide{
+    display: flex !important;
+    justify-content: center !important;
+}
