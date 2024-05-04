@@ -59,6 +59,9 @@
   }
   
   @media only screen and (max-width: 768px) {
+    .modal-content {
+      margin: 15% auto;
+    }
     h1,
     h2 {
       font-size: 1.4rem !important;
@@ -219,6 +222,9 @@
   }
   
   @media only screen and (max-width: 576px) {
+    .modal-content {
+      margin: 15% auto;
+    }
     .hero__wrapper {
       flex-direction: column;
     }
