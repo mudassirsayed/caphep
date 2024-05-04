@@ -33,7 +33,7 @@
     }
   
     .single__team {
-      width: 31%;
+      width: 100%;
     }
     .header{
         height: 80px;
@@ -53,6 +53,9 @@
       .header{
         height: 80px;
       }
+      #our_story{
+        grid-template-columns: 1fr;
+    }
   }
   
   @media only screen and (max-width: 768px) {
@@ -94,7 +97,7 @@
       right: 0;
       width: 300px;
       height: 100%;
-      background: #00308F;
+      background: #fff;
       flex-direction: column;
       justify-content: center;
     }
@@ -171,7 +174,7 @@
     }
   
     .single__team {
-      width: 48%;
+      width: 100%;
     }
   
     .newsletter__input {
@@ -210,9 +213,8 @@
     .question button{
         font-size: 0.9rem;
     }
-    .swiper-button-next,
-    .swiper-button-prev {
-      display: none !important;
+    #our_story{
+        grid-template-columns: 1fr;
     }
   }
   
@@ -288,11 +290,10 @@
       .question button{
         font-size: 0.9rem;
     }
-    .swiper-button-next,
-    .swiper-button-prev {
-      display: none !important;
-    }
     .contact_us{
         padding: 0px;
     }
+    #our_story{
+      grid-template-columns: 1fr;
+  }
   }

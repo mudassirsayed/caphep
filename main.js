@@ -12,42 +12,66 @@ navMenu.addEventListener('click', () => {
 })
 
 document.addEventListener('DOMContentLoaded', function () {
-  function animateCounter(elementId, finalValue) {
-    let currentCount = 0
-    const counterElement = document.getElementById(elementId)
+  function animateCounter(elementId, finalValue, duration) {
+    let startTime = null;
+    let currentCount = 0;
+    const counterElement = document.getElementById(elementId);
 
-    function updateCounter() {
-      counterElement.textContent = currentCount + '+'
-      currentCount++
+    function updateCounter(timestamp) {
+      if (!startTime) startTime = timestamp;
+      const elapsedTime = timestamp - startTime;
+      const progress = Math.min(elapsedTime / duration, 1); // Ensure progress doesn't exceed 1
+      const value = Math.floor(progress * finalValue); // Calculate current value based on progress
+      counterElement.textContent = value + '+';
 
-      if (currentCount <= finalValue) {
-        requestAnimationFrame(updateCounter)
+      if (progress < 1) {
+        requestAnimationFrame(updateCounter);
       }
     }
 
-    updateCounter()
+    requestAnimationFrame(updateCounter);
   }
 
-  const section = document.getElementById('counterSection')
+  function animateSalaryCounter(elementId, finalValue, duration) {
+    let startTime = null;
+    let currentCount = 0;
+    const counterElement = document.getElementById(elementId);
+
+    function updateCounter(timestamp) {
+      if (!startTime) startTime = timestamp;
+      const elapsedTime = timestamp - startTime;
+      const progress = Math.min(elapsedTime / duration, 1); // Ensure progress doesn't exceed 1
+      const value = Math.floor(progress * finalValue); // Calculate current value based on progress
+      counterElement.textContent = value + '%';
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCounter);
+      }
+    }
+
+    requestAnimationFrame(updateCounter);
+  }
+
+  const section = document.getElementById('counterSection');
   const options = {
     root: null,
     rootMargin: '0px',
     threshold: 0.5,
-  }
+  };
 
   const observer = new IntersectionObserver(function (entries, observer) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        animateCounter('happyClients', 150)
-        animateCounter('projectsCompleted', 120)
-        animateCounter('teamMembers', 35)
-        observer.unobserve(entry.target)
+        animateCounter('happyClients', 3000, 5000); // 5000ms = 5s
+        animateSalaryCounter('projectsCompleted', 80, 5000); // 5000ms = 5s
+        animateCounter('teamMembers', 50, 5000); // 5000ms = 5s
+        observer.unobserve(entry.target);
       }
-    })
-  }, options)
+    });
+  }, options);
 
-  observer.observe(section)
-})
+  observer.observe(section);
+});
 
 const buttons = document.querySelectorAll('button')
 
@@ -112,16 +136,16 @@ var swiper = new Swiper('.slide-content', {
   slidesPerView: 3,
   loop: true,
   loopedSlides: 3,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
+  // navigation: {
+  //   nextEl: '.swiper-button-next',
+  //   prevEl: '.swiper-button-prev',
+  // },
+  // pagination: {
+  //   el: '.swiper-pagination',
+  //   clickable: true,
+  // },
   autoplay: {
-    delay: 5000,
+    delay: 4000,
     disableOnInteraction: false,
   },
   breakpoints: {
@@ -135,9 +159,60 @@ var swiper = new Swiper('.slide-content', {
       spaceBetween: 0,
       loopedSlides: 2,
     },
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 0,
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 4,
     },
   },
 })
+var swiper = new Swiper('.programs-content', {
+  slidesPerView: 3,
+  loop: true,
+  loopedSlides: 3,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  // pagination: {
+  //   el: '.swiper-pagination',
+  //   clickable: true,
+  // },
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    240: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loopedSlides: 1,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 0,
+      loopedSlides: 2,
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 4,
+    },
+  },
+})
+var swiper = new Swiper(".mySwiperservices", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    700: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+  },
+});

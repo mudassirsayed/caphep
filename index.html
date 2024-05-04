@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="responsive.css" />
     <link rel="stylesheet" href="swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
   </head>
   <body>
     <!-- ========== header start ========== -->
@@ -36,7 +37,7 @@
                 <li class="nav__item"><a onclick="scrollToSection('programs')">Programs</a></li>
                 <li class="nav__item"><a onclick="scrollToSection('clients')">Clients</a></li>
                 <li class="nav__item"><a onclick="scrollToSection('about')">About</a></li>
-                <li class="nav__item"><a onclick="scrollToSection('contact_form')">Contact</a></li>
+                <li class="nav__item"><button onclick="scrollToSection('contact_form')" class="contact-btn">Contact</button></li>
               </ul>
             </div>
           </div>
@@ -49,21 +50,10 @@
 
     <!-- ========== main start ========== -->
     <section class="hero__section" id="home">
-      <div class="container">
-        <div class="hero__wrapper">
-          <div class="hero__content">
-            <h2>We explore your ability and employment solutions</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse
-              minus, pariatur voluptatum aliquam eos et.
-            </p>
-            <button class="btn" id="openModalBtn">Book Now</button>
-          </div>
-
+      <div class="hero_container">
           <div class="hero__img">
-            <img src="./images/hero.jpg" alt="hero image" />
+            <img  id="openModalBtn" src="./images/herotwo.png" alt="hero image" />
           </div>
-        </div>
       </div>
     </section>
     <!-- about us section start -->
@@ -71,16 +61,14 @@
       <div class="container">
         <div class="search__engine-wrapper about__us">
           <div class="search__img about__img">
-            <img src="./images/about.jpg" alt="about image" />
+            <img src="./images/chooseus.png" alt="about image" />
           </div>
           <div class="search__engine-content">
             <p class="about__us-text">About us</p>
-            <h2>We are here for business solution ideas</h2>
+            <h2>CAPHEP – Comprehensive Advancement with Premium Higher Education Programs.</h2>
             <p class="search__engine-text02">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-              laudantium officiis itaque magnam modi ipsum laboriosam quia
-              temporibus minima dignissimos. Quaerat ipsum odio corporis dolore
-              expedita esse est officia dolores.
+              We unlock opportunities for working professionals to advance their education through online and offline platforms. 
+              In addition to this, CAPHEP provides placement assistance, adapts to user successes and mistakes in real time and incorporates live-streamed one-on-one tutoring, peer-to-peer networking, discussion forums, auto-graded assignments and a flexible and structured online education system.
             </p>
             <button class="btn" onclick="scrollToSection('contact_form')">Learn More</button>
           </div>
@@ -89,207 +77,459 @@
     </section>
 
     <!-- about us section end -->
-
-    <section id="programs">
-      <div class="container">
-        <div class="our__team-wrapper">
-          <div class="our__team-top">
-            <h2>Our Programs</h2>
-            <p>
-              See what courses are available and how easy it is to enroll.
-            </p>
+      <!-- counter section start -->
+      <section id="counterSection">
+        <div class="container">
+          <div class="counter__wrapper">
+            <div class="counter__item">
+              <span class="counter__number" id="happyClients">0</span>
+              <h5 class="counter__text">Enrolled Learners</h5>
+            </div>
+  
+            <div class="counter__item">
+              <span class="counter__number" id="projectsCompleted">0</span>
+              <h5 class="counter__text">Avg. Salary Hike</h5>
+            </div>
+  
+            <div class="counter__item">
+              <span class="counter__number" id="teamMembers">0</span>
+              <h5 class="counter__text">Programs & Specialization</h5>
+            </div>
           </div>
-
-          <div class="team__list">
-            <div class="single__team">
-              <div class="single__team-img">
-                <img src="./images/about.jpg" alt="" />
-              </div>
-              <div class="single__team-content">
-                <h5>Executive Courses</h5>
-              </div>
-              <hr />
-              <div class="single__team-content">
-                <p>
-                  A postgraduate course is an advanced level of education,
-                  focusing on specialized knowledge in a specific field or
-                  discipline.
-                </p>
-              </div>
-              <div class="single__team-content">
-                <p>
-                  <span><i class="ri-time-line"></i></span>
-                  Duration: 2 Years
-                </p>
-              </div>
+        </div>
+      </section>
+  
+      <!-- counter section end -->
+     
+        <!-- testnnial section starts -->
+    <section id="clients">
+      <div class="swiper">
+        <div class="section_top" style="margin: 50px 0; color: #fff;">
+          <h2 style="color: #fff;">Learn from Top Universities & Institutes</h2>
+        </div>
+        <div class="slide-content">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./images/university01.jpg"/></div>
+          <div class="swiper-slide"><img src="./images/university03.jpg"/></div>
+          <div class="swiper-slide"><img src="./images/university04.jpg"/></div>
+          <div class="swiper-slide"><img src="./images/university05.jpg"/></div>
+          <div class="swiper-slide"><img src="./images/university-02.png"/></div>
+          <div class="swiper-slide"><img src="./images/university01.jpg"/></div>
+          <div class="swiper-slide"><img src="./images/university03.jpg"/></div>
+          <div class="swiper-slide"><img src="./images/university04.jpg"/></div>
+          <div class="swiper-slide"><img src="./images/university05.jpg"/></div>
+          <div class="swiper-slide"><img src="./images/university-02.png"/></div>
+        </div>
+      </div>
+        <!-- <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div> -->
+    <div class="swiper-pagination"></div>
+        </div>
+    </section>
+      <!-- testnnial section ends -->
+      <!-- <section id="programs">
+        <div class="container">
+          <div class="our__team-wrapper">
+            <div class="our__team-top">
+              <h2>Our Programs</h2>
+              <p>
+                See what courses are available and how easy it is to enroll.
+              </p>
+              <div class="service-slide-btns">
+                <div class="swiper_button_prev"></div>
+                <div class="swiper_button_next"></div>
             </div>
-            <div class="single__team">
-              <div class="single__team-img">
-                <img src="./images/about.jpg" alt="" />
-              </div>
-              <div class="single__team-content">
-                <h5>Executive Courses</h5>
-              </div>
-              <hr />
-              <div class="single__team-content">
-                <p>
-                  A postgraduate course is an advanced level of education,
-                  focusing on specialized knowledge in a specific field or
-                  discipline.
-                </p>
-              </div>
-              <div class="single__team-content">
-                <p>
-                  <span><i class="ri-time-line"></i></span>
-                  Duration: 2 Years
-                </p>
-              </div>
             </div>
-            <div class="single__team">
-              <div class="single__team-img">
-                <img src="./images/about.jpg" alt="" />
+            <div class="team__list">
+              <div class="single__team">
+                <div class="single__team-img">
+                  <img src="./images/about.jpg" alt="" />
+                </div>
+                <div class="single__team-content">
+                  <h5>Mudassir Sayed</h5>
+                </div>
+                <hr />
+                <div class="single__team-content">
+                  <p>
+                    A postgraduate course is an advanced level of education,
+                    focusing on specialized knowledge in a specific field or
+                    discipline.
+                  </p>
+                </div>
+                <div class="single__team-content">
+                  <p>
+                    <span><i class="ri-time-line"></i></span>
+                    Duration: 2 Years
+                  </p>
+                </div>
               </div>
-              <div class="single__team-content">
-                <h5>Executive Courses</h5>
+              <div class="single__team">
+                <div class="single__team-img">
+                  <img src="./images/about.jpg" alt="" />
+                </div>
+                <div class="single__team-content">
+                  <h5>Mudassir Sayed</h5>
+                </div>
+                <hr />
+                <div class="single__team-content">
+                  <p>
+                    A postgraduate course is an advanced level of education,
+                    focusing on specialized knowledge in a specific field or
+                    discipline.
+                  </p>
+                </div>
+                <div class="single__team-content">
+                  <p>
+                    <span><i class="ri-time-line"></i></span>
+                    Duration: 2 Years
+                  </p>
+                </div>
               </div>
-              <hr />
-              <div class="single__team-content">
-                <p>
-                  A postgraduate course is an advanced level of education,
-                  focusing on specialized knowledge in a specific field or
-                  discipline.
-                </p>
+              <div class="single__team">
+                <div class="single__team-img">
+                  <img src="./images/about.jpg" alt="" />
+                </div>
+                <div class="single__team-content">
+                  <h5>Mudassir Sayed</h5>
+                </div>
+                <hr />
+                <div class="single__team-content">
+                  <p>
+                    A postgraduate course is an advanced level of education,
+                    focusing on specialized knowledge in a specific field or
+                    discipline.
+                  </p>
+                </div>
+                <div class="single__team-content">
+                  <p>
+                    <span><i class="ri-time-line"></i></span>
+                    Duration: 2 Years
+                  </p>
+                </div>
               </div>
-              <div class="single__team-content">
-                <p>
-                  <span><i class="ri-time-line"></i></span>
-                  Duration: 2 Years
-                </p>
-              </div>
-            </div>
-
-            <div class="single__team">
-              <div class="single__team-img">
-                <img src="./images/about.jpg" alt="" />
-              </div>
-              <div class="single__team-content">
-                <h5>Executive Courses</h5>
-              </div>
-              <hr />
-              <div class="single__team-content">
-                <p>
-                  A postgraduate course is an advanced level of education,
-                  focusing on specialized knowledge in a specific field or
-                  discipline.
-                </p>
-              </div>
-              <div class="single__team-content">
-                <p>
-                  <span><i class="ri-time-line"></i></span>
-                  Duration: 2 Years
-                </p>
+  
+              <div class="single__team">
+                <div class="single__team-img">
+                  <img src="./images/about.jpg" alt="" />
+                </div>
+                <div class="single__team-content">
+                  <h5>Mudassir Sayed</h5>
+                </div>
+                <hr />
+                <div class="single__team-content">
+                  <p>
+                    A postgraduate course is an advanced level of education,
+                    focusing on specialized knowledge in a specific field or
+                    discipline.
+                  </p>
+                </div>
+                <div class="single__team-content">
+                  <p>
+                    <span><i class="ri-time-line"></i></span>
+                    Duration: 2 Years
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section> -->
+
+  
     <!-- choose us section start -->
     <section>
       <div class="container">
         <div class="section_top">
-          <h2>Why Choose us</h2>
+          <h2>Why Caphep</h2>
         </div>
-
         <div class="choose__us-wrapper">
-          <div class="choose__us-box">
-            <div class="choose__img">
-              <img src="./images/award.png" alt="" />
+            <div class="choose__us-image">
+              <img src="./images/chooseone.png" alt="" />
+            </div>     
+            <div class="choose__us-image">
+              <img src="./images/choosetwo.png" alt="" />
+            </div>  
+            <div class="choose__us-image">
+              <img src="./images/choosethree.png" alt="" />
+            </div>  
             </div>
-            <div class="choose__us-content">
-              <h4>Professional and Certified Company</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis,
-                ipsam!
-              </p>
-            </div>
+            <div class="choose__us-wrapper">
+              <div class="choose__us-image">
+                <img src="./images/choosefour.png" alt="" />
+              </div>  
+              <div class="choose__us-image">
+                <img src="./images/choosefive.png" alt="" />
+              </div>  
+              <div class="choose__us-image">
+                <img src="./images/choosesix.png" alt="" />
           </div>
-
-          <div class="choose__us-box">
-            <div class="choose__img choose__img-box-02">
-              <img src="./images/idea.png" alt="" />
-            </div>
-            <div class="choose__us-content">
-              <h4>Business and Product Concept too</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis,
-                ipsam!
-              </p>
-            </div>
           </div>
-
-          <div class="choose__us-box">
-            <div class="choose__img choose__img-box-03">
-              <img src="./images/handshake.png" alt="" />
-            </div>
-            <div class="choose__us-content">
-              <h4>International Good Relationship</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis,
-                ipsam!
-              </p>
-            </div>
-          </div>
-
-          <div class="choose__us-box">
-            <div class="choose__img choose__img-box-04">
-              <img src="./images/design-thinking.png" alt="" />
-            </div>
-            <div class="choose__us-content">
-              <h4>Pixel and Perfect Design</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis,
-                ipsam!
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- choose us section end -->
-    <!-- counter section start -->
-    <section id="counterSection">
-      <div class="container">
-        <div class="section_top">
-          <h2>Our Achievements</h2>
-        </div>
-        <div class="counter__wrapper">
-          <div class="counter__item">
-            <span class="counter__number" id="happyClients">0</span>
-            <h5 class="counter__text">Happy Clients</h5>
-          </div>
+    <section id="our-services">
 
-          <div class="counter__item">
-            <span class="counter__number" id="projectsCompleted">0</span>
-            <h5 class="counter__text">Projects Completed</h5>
+      <!--**heading********************-->
+      <div class="services-heading">
+          <!--text-->
+          <div class="services-heading-text">
+              <strong>Testimonials</strong>
+              <h2>What Our Students Says</h2>
           </div>
-
-          <div class="counter__item">
-            <span class="counter__number" id="teamMembers">0</span>
-            <h5 class="counter__text">Team Members</h5>
-          </div>
-        </div>
+          <!--btns-->
+         <div class="service-slide-btns">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+          </div> 
       </div>
-    </section>
 
-    <!-- counter section end -->
+      <!--**container*******************-->
+      <div class="services-box-container">
+
+           <!-- Swiper -->
+          <div class="swiper_two mySwiperservices">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="single__team">
+                    <div class="single__team-img">
+                      <img src="./images/about.png" alt="" />
+                    </div>
+                    <div class="single__team-content">
+                      <h5>Mudassir Sayed</h5>
+                      <div class="t-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    </div>
+                    <hr />
+                    <div class="single__team-content">
+                      <p>
+                        A postgraduate course is an advanced level of education,
+                        focusing on specialized knowledge in a specific field or
+                        discipline.
+                      </p>
+                    </div>
+                    <div class="social-icons">
+                      <i class="fab fa-linkedin"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                     
+                  <div class="single__team">
+                    <div class="single__team-img">
+                      <img src="./images/about.png" alt="" />
+                    </div>
+                    <div class="single__team-content">
+                      <h5>Mudassir Sayed</h5>
+                      <div class="t-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    </div>
+                    <hr />
+                    <div class="single__team-content">
+                      <p>
+                        A postgraduate course is an advanced level of education,
+                        focusing on specialized knowledge in a specific field or
+                        discipline.
+                      </p>
+                    </div>
+                    <div class="social-icons">
+                      <i class="fab fa-linkedin"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="single__team">
+                    <div class="single__team-img">
+                      <img src="./images/about.png" alt="" />
+                    </div>
+                    <div class="single__team-content">
+                      <h5>Mudassir Sayed</h5>
+                      <div class="t-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    </div>
+                    <hr />
+                    <div class="single__team-content">
+                      <p>
+                        A postgraduate course is an advanced level of education,
+                        focusing on specialized knowledge in a specific field or
+                        discipline.
+                      </p>
+                    </div>
+                    <div class="social-icons">
+                      <i class="fab fa-linkedin"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">               
+                  <div class="single__team">
+                    <div class="single__team-img">
+                      <img src="./images/about.png" alt="" />
+                    </div>
+                    <div class="single__team-content">
+                      <h5>Mudassir Sayed</h5>
+                      <div class="t-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    </div>
+                    <hr />
+                    <div class="single__team-content">
+                      <p>
+                        A postgraduate course is an advanced level of education,
+                        focusing on specialized knowledge in a specific field or
+                        discipline.
+                      </p>
+                    </div>
+                    <div class="social-icons">
+                      <i class="fab fa-linkedin"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="single__team">
+                    <div class="single__team-img">
+                      <img src="./images/about.png" alt="" />
+                    </div>
+                    <div class="single__team-content">
+                      <h5>Mudassir Sayed</h5>
+                      <div class="t-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    </div>
+                    <hr />
+                    <div class="single__team-content">
+                      <p>
+                        A postgraduate course is an advanced level of education,
+                        focusing on specialized knowledge in a specific field or
+                        discipline.
+                      </p>
+                    </div>
+                    <div class="social-icons">
+                      <i class="fab fa-linkedin"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="single__team">
+                    <div class="single__team-img">
+                      <img src="./images/about.png" alt="" />
+                    </div>
+                    <div class="single__team-content">
+                      <h5>Mudassir Sayed</h5>
+                      <div class="t-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    </div>
+                    <hr />
+                    <div class="single__team-content">
+                      <p>
+                        A postgraduate course is an advanced level of education,
+                        focusing on specialized knowledge in a specific field or
+                        discipline.
+                      </p>
+                    </div>
+                    <div class="social-icons">
+                      <i class="fab fa-linkedin"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="single__team">
+                    <div class="single__team-img">
+                      <img src="./images/about.png" alt="" />
+                    </div>
+                    <div class="single__team-content">
+                      <h5>Mudassir Sayed</h5>
+                      <div class="t-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    </div>
+                    <hr />
+                    <div class="single__team-content">
+                      <p>
+                        A postgraduate course is an advanced level of education,
+                        focusing on specialized knowledge in a specific field or
+                        discipline.
+                      </p>
+                    </div>
+                    <div class="social-icons">
+                      <i class="fab fa-linkedin"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="single__team">
+                    <div class="single__team-img">
+                      <img src="./images/about.png" alt="" />
+                    </div>
+                    <div class="single__team-content">
+                      <h5>Mudassir Sayed</h5>
+                      <div class="t-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    </div>
+                    <hr />
+                    <div class="single__team-content">
+                      <p>
+                        A postgraduate course is an advanced level of education,
+                        focusing on specialized knowledge in a specific field or
+                        discipline.
+                      </p>
+                    </div>
+                    <div class="social-icons">
+                      <i class="fab fa-linkedin"></i>
+                    </div>
+                  </div>
+                </div>  
+              </div><!--wrapper-end-->
+          </div><!--swiper-end-->
+
+      </div>
+
+      <!--btn-->
+      <!-- <span class="service-btn">Contact Us For Need Any Help And Services <a href="#">Let's get Started</a></span> -->
+  
+  </section>
 
     <!-- Faqs section starts -->
-    <section>
+    <section style="background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;">
       <div class="container">
         <div class="section_top">
-          <h2>FAQ's</h2>
+          <h2 style="color: #fff;">FAQ's</h2>
         </div>
         <div class="questions-container">
           <div class="question">
@@ -357,32 +597,7 @@
     <!-- Faqs section ends -->
 
 
-    <!-- testnnial section starts -->
-    <section id="clients">
-      <div class="container swiper">
-        <div class="section_top">
-          <h2>Our Top Ranked Partnered Institutes & Universities</h2>
-        </div>
-        <div class="slide-content">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="./images/university01.jpg"/></div>
-          <div class="swiper-slide"><img src="./images/university03.jpg"/></div>
-          <div class="swiper-slide"><img src="./images/university04.jpg"/></div>
-          <div class="swiper-slide"><img src="./images/university05.jpg"/></div>
-          <div class="swiper-slide"><img src="./images/university-02.png"/></div>
-          <div class="swiper-slide"><img src="./images/university01.jpg"/></div>
-          <div class="swiper-slide"><img src="./images/university03.jpg"/></div>
-          <div class="swiper-slide"><img src="./images/university04.jpg"/></div>
-          <div class="swiper-slide"><img src="./images/university05.jpg"/></div>
-          <div class="swiper-slide"><img src="./images/university-02.png"/></div>
-        </div>
-      </div>
-        <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
-        </div>
-    </section>
-      <!-- testnnial section ends -->
+  
 
        <!-- contact form section starts -->
        <section id="contact_form">
