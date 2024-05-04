@@ -35,7 +35,9 @@ body {
 section {
   padding: 50px 0px;
 }
-
+#home{
+  padding-top: 100px;
+} 
 /* custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -167,11 +169,7 @@ font-size: 1.1rem;
   margin-bottom: 30px;
   font-size: 0.9rem;
 }
-.hero_container {
-  max-width: 1240px;
-  margin: auto;
-  padding: 0px 15px;
-}
+
 .btn {
   border: none;
   padding: 10px 30px;

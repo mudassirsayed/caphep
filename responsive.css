@@ -219,6 +219,9 @@
     #our_story{
         grid-template-columns: 1fr;
     }
+    #home{
+      padding-top: 85px;
+    } 
   }
   
   @media only screen and (max-width: 576px) {
@@ -302,4 +305,7 @@
     #our_story{
       grid-template-columns: 1fr;
   }
+  #home{
+    padding-top: 85px;
+  } 
   }
