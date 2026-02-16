@@ -89,10 +89,16 @@ document.addEventListener('DOMContentLoaded', function () {
   // Get the modal and button elements
   var modal = document.getElementById('myModal')
   var btn = document.getElementById('openModalBtn')
+  var btnTwo = document.getElementById('openModalBtntwo')
   var span = document.getElementsByClassName('close')[0]
 
   // Open the modal when the button is clicked
   btn.addEventListener('click', function () {
+    modal.style.display = 'block'
+    document.body.classList.add('modal-open')
+  })
+
+  btnTwo.addEventListener('click', function () {
     modal.style.display = 'block'
     document.body.classList.add('modal-open')
   })
@@ -216,3 +222,38 @@ var swiper = new Swiper(".mySwiperservices", {
     },
   },
 });
+// const header1 = document.querySelector('.top-header');
+// const header2 = document.getElementById('headertwo');
+
+// // Function to handle the scroll event
+// function handleScroll() {
+//     // Check if the user has scrolled to the bottom of the page
+//     const scrollPosition = window.pageYOffset;
+//     const totalHeight = document.body.scrollHeight - window.innerHeight;
+
+//     // If the user has scrolled to the bottom, hide the first header
+//     if (scrollPosition >= totalHeight) {
+//         header1.style.display = 'none';
+//         header1.style.visibility = 'hidden';
+//     } else {
+//         header1.style.display = 'block';
+//     }
+// }
+
+// Add the scroll event listener
+// window.addEventListener('scroll', handleScroll);
+const slides = document.querySelectorAll(".carousel__item");
+let currentSlide = 0;
+
+function showSlide(index) {
+  slides.forEach((slide) => slide.classList.remove("active"));
+  slides[index].classList.add("active");
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Auto slide every 3 seconds
+setInterval(nextSlide, 3000);

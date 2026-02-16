@@ -20,7 +20,19 @@
   </head>
   <body>
     <!-- ========== header start ========== -->
-    <header class="header">
+    <!-- <header class="top-header" id="headerone">
+      <div class="container">
+        <div class="header__wrapper">
+          <p>
+            Admissions Open 2024-2025
+          </p>
+          <p>
+            Admissions Open 2024-2025
+          </p>
+          </div>
+          </div>
+    </header> -->
+    <header class="header" id="headertwo">
       <div class="container">
         <div class="header__wrapper">
           <div class="logo-container">
@@ -50,23 +62,35 @@
 
     <!-- ========== main start ========== -->
     <div class="hero__section" id="home">
-          <div class="hero__img">
-            <img  id="openModalBtn" src="./images/herothree.png" alt="hero image" />
-          </div>
+      <div class="hero__img carousel">
+        <img id="openModalBtn" class="carousel__item active" src="./images/hero_carous.png" alt="hero image" />
+        <img id="openModalBtntwo" class="carousel__item" src="./images/hero_carousel.png" alt="hero image" />
+      </div>
     </div>
+    
     <!-- about us section start -->
     <section id="about">
       <div class="container">
         <div class="search__engine-wrapper about__us">
           <div class="search__img about__img">
-            <img src="./images/chooseus.png" alt="about image" />
+            <img src="./images/chooseus_two.jpg" alt="about image" />
           </div>
           <div class="search__engine-content">
-            <p class="about__us-text">About us</p>
-            <h2>CAPHEP – Comprehensive Advancement with Premium Higher Education Programs.</h2>
+            <p class="about__us-text">ABOUT ONLEARN EDUCATION</p>
+            <!-- <h2>CAPHEP – Comprehensive Advancement with Premium Higher Education Programs.</h2> -->
             <p class="search__engine-text02">
-              We unlock opportunities for working professionals to advance their education through online and offline platforms. 
-              In addition to this, CAPHEP provides placement assistance, adapts to user successes and mistakes in real time and incorporates live-streamed one-on-one tutoring, peer-to-peer networking, discussion forums, auto-graded assignments and a flexible and structured online education system.
+              We unlock opportunities for working professionals to advance their education through online
+and offline platform. OnLearn Education; an affiliate to the top notch National and International
+Universities and Institutes, offers multiple courses such as MBA, PGDM, Executive MBA, BBA,
+Doctorate courses, short certification courses, digital marketing programs and other courses
+geared toward a variety of contexts in a slick and simple learning management system. We
+emerge with an aim to train the potential working professionals with a blend of live streamed
+instruction with online assignments and round-the-clock academic support. These interactive
+courses can offer high achievers further enrichment, or fill knowledge gaps for struggling
+students. In addition to this, CAPHEP provides placement assistance, adapts to user successes
+and mistakes in real time and incorporates live-streamed one-on-one tutoring, peer-to-peer
+networking, discussion forums, auto-graded assignments and a flexible and structured online
+education system.
             </p>
             <button class="btn" onclick="scrollToSection('contact_form')">Learn More</button>
           </div>
@@ -111,12 +135,18 @@
           <div class="swiper-slide"><img src="./images/university03.jpg"/></div>
           <div class="swiper-slide"><img src="./images/university04.jpg"/></div>
           <div class="swiper-slide"><img src="./images/university05.jpg"/></div>
-          <div class="swiper-slide"><img src="./images/university-02.png"/></div>
+          <!-- <div class="swiper-slide"><img src="./images/university06.png"/></div>
+          <div class="swiper-slide"><img src="./images/university07.png"/></div>
+          <div class="swiper-slide"><img src="./images/university.webp"/></div> -->
+          <!-- <div class="swiper-slide"><img src="./images/university-02.png"/></div> -->
           <div class="swiper-slide"><img src="./images/university01.jpg"/></div>
           <div class="swiper-slide"><img src="./images/university03.jpg"/></div>
           <div class="swiper-slide"><img src="./images/university04.jpg"/></div>
           <div class="swiper-slide"><img src="./images/university05.jpg"/></div>
-          <div class="swiper-slide"><img src="./images/university-02.png"/></div>
+          <!-- <div class="swiper-slide"><img src="./images/university06.png"/></div>
+          <div class="swiper-slide"><img src="./images/university07.png"/></div>
+          <div class="swiper-slide"><img src="./images/university.webp"/></div> -->
+          <!-- <div class="swiper-slide"><img src="./images/university-02.png"/></div> -->
         </div>
       </div>
         <!-- <div class="swiper-button-next"></div>
@@ -238,7 +268,7 @@
     <section>
       <div class="container">
         <div class="section_top">
-          <h2>Why Caphep</h2>
+          <h2>WHY ONLEARN EDUCATION</h2>
         </div>
         <div class="choose__us-wrapper">
             <div class="choose__us-image">

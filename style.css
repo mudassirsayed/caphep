@@ -50,6 +50,16 @@ section {
 }
 
 /* header style start */
+/* .top-header{
+  width: 100%;
+  min-height: 33px;
+  background-color: #00306e;
+}
+.top-header p{
+  color: #fff;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+} */
 .header {
   width: 100%;
   min-height: 70px;
@@ -179,7 +189,29 @@ font-size: 1.1rem;
   cursor: pointer;
 }
 
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
 
+.carousel__item {
+  width: 100%;
+  display: none;
+  animation: fade 0.6s ease-in-out;
+}
+
+.carousel__item.active {
+  display: block;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* hero section style end */
 
 /* about us section start */
@@ -198,7 +230,7 @@ font-size: 1.1rem;
   
   .about__img {
     text-align: right;
-    align-self: flex-end;
+    /* align-self: flex-end; */
   }
   
   /* about us section end */
