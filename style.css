@@ -661,8 +661,12 @@ select{
 }
 
 .swiper{
-  min-height: 55vh;
+  min-height: 60vh;
   background-color: #00267b;
+}
+
+.swiper-slide img {
+  width: 80%;
 }
 
 #our-services{
