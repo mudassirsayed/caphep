@@ -242,18 +242,33 @@ var swiper = new Swiper(".mySwiperservices", {
 
 // Add the scroll event listener
 // window.addEventListener('scroll', handleScroll);
-const slides = document.querySelectorAll(".carousel__item");
-let currentSlide = 0;
+const track = document.querySelector(".carousel__track");
+let slides = document.querySelectorAll(".carousel__track img");
 
-function showSlide(index) {
-  slides.forEach((slide) => slide.classList.remove("active"));
-  slides[index].classList.add("active");
+// Clone first slide
+const firstClone = slides[0].cloneNode(true);
+track.appendChild(firstClone);
+
+// Re-select slides (now includes clone)
+slides = document.querySelectorAll(".carousel__track img");
+
+let currentIndex = 0;
+
+function moveSlide() {
+  currentIndex++;
+  track.style.transition = "transform 0.6s ease-in-out";
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+  // When reaching clone
+  if (currentIndex === slides.length - 1) {
+    setTimeout(() => {
+      track.style.transition = "none";
+      currentIndex = 0;
+      track.style.transform = `translateX(0%)`;
+    }, 600); // same as transition time
+  }
 }
 
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
-}
+setInterval(moveSlide, 3000);
 
-// Auto slide every 3 seconds
-setInterval(nextSlide, 3000);
+
