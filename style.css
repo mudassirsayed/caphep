@@ -360,11 +360,10 @@ font-size: 1.1rem;
 
 .choose__us-wrapper {
     display: flex;
-    gap: 1rem;
     margin-bottom: 2rem;
   }
   .choose__us-image img{
-    width: 85%;
+    width: 90%;
   }
   
   /* choose us section style end */
