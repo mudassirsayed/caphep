@@ -62,9 +62,10 @@ document.addEventListener('DOMContentLoaded', function () {
   const observer = new IntersectionObserver(function (entries, observer) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        animateCounter('happyClients', 3000, 5000); // 5000ms = 5s
-        animateSalaryCounter('projectsCompleted', 80, 5000); // 5000ms = 5s
+        animateCounter('happyClients', 3500, 5000); // 5000ms = 5s
         animateCounter('teamMembers', 50, 5000); // 5000ms = 5s
+        animateCounter('leadingpartners', 15, 5000); // 5000ms = 5s
+        animateSalaryCounter('projectsCompleted', 80, 5000); // 5000ms = 5s
         observer.unobserve(entry.target);
       }
     });
